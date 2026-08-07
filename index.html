@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A birthday surprise made with love." />
+  <title>Happy Birthday, My Love ❤️</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 1. Welcome page -->
+  <section id="welcome-screen">
+    <div class="welcome-card">
+      <p class="small-title">A little surprise for you</p>
+
+      <!-- Replace with her photo -->
+      <img
+        class="girlfriend-photo"
+        src="assets/images/girlfriend-photo.jpg"
+        alt="My beautiful girlfriend"
+      />
+
+      <h1>Is it your birthday, my love? 🎂</h1>
+      <p>I have something small, sweet, and made especially for you.</p>
+
+      <div class="button-group">
+        <button id="yes-btn" class="primary-btn">Yes, it is! 💕</button>
+        <button id="no-btn" class="secondary-btn">No 🙈</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Gift selection page -->
+  <main id="surprise-screen" class="hidden">
+    <div class="section-heading">
+      <h1>Happy Birthday, My Beautiful Girl ❤️</h1>
+      <p>I made these little surprises just for you.</p>
+    </div>
+
+    <div class="gifts-container">
+      <article class="gift-card" id="letter-gift">
+        <div class="gift-icon">💌</div>
+        <h2>A Letter For You</h2>
+        <p>Open this whenever you want to feel how loved you are.</p>
+      </article>
+
+      <article class="gift-card" id="memories-gift">
+        <div class="gift-icon">🎞️</div>
+        <h2>Our Memories</h2>
+        <p>A tiny collection of the moments I never want to forget.</p>
+      </article>
+
+      <article class="gift-card" id="secret-gift">
+        <div class="gift-icon">🔐</div>
+        <h2>Secret Love Vault</h2>
+        <p>There is something extra special waiting inside.</p>
+      </article>
+    </div>
+  </main>
+
+  <!-- 3. Gift One: love letter -->
+  <section id="letter-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn" data-close="letter-modal" aria-label="Close">
+        ×
+      </button>
+
+      <h2 class="modal-title">To My Favorite Person 💌</h2>
+
+      <div class="letter-paper">
+        <!-- Replace this with your own birthday letter -->
+        <p>My dearest love,</p>
+
+        <p>
+          Happy birthday to the most beautiful girl in my world. You bring so
+          much happiness, warmth, and peace into my life. Every moment with you
+          becomes one of my favorite memories.
+        </p>
+
+        <p>
+          I hope this new year gives you every smile you deserve, every dream
+          you are hoping for, and so much love that your heart feels full every
+          single day. Thank you for being you, and thank you for letting me love
+          you.
+        </p>
+
+        <p>
+          Today is your day, my princess. Keep shining, keep smiling, and never
+          forget that I will always be cheering for you.
+        </p>
+
+        <p class="letter-signature">Forever yours, Abebe ❤️</p>
+      </div>
+
+      <h3 class="memory-section-title">Some of my favorite pictures of you</h3>
+
+      <div class="gallery-grid">
+        <!-- Replace these image paths with your pictures -->
+        <img src="assets/images/memories/memory-1.jpg" alt="Our memory 1" />
+        <img src="assets/images/memories/memory-2.jpg" alt="Our memory 2" />
+        <img src="assets/images/memories/memory-3.jpg" alt="Our memory 3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Gift Two: memories -->
+  <section id="memories-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn" data-close="memories-modal" aria-label="Close">
+        ×
+      </button>
+
+      <h2 class="modal-title">Our Little Memory Book 🎞️</h2>
+
+      <h3 class="memory-section-title">Photos</h3>
+      <div class="gallery-grid">
+        <img src="assets/images/memories/memory-1.jpg" alt="Memory photo 1" />
+        <img src="assets/images/memories/memory-2.jpg" alt="Memory photo 2" />
+        <img src="assets/images/memories/memory-3.jpg" alt="Memory photo 3" />
+      </div>
+
+      <h3 class="memory-section-title">Videos</h3>
+      <div class="video-grid">
+        <!-- Add your own videos here -->
+        <video controls>
+          <source src="assets/videos/memory-video-1.mp4" type="video/mp4" />
+          Your browser does not support video.
+        </video>
+
+        <video controls>
+          <source src="assets/videos/memory-video-2.mp4" type="video/mp4" />
+          Your browser does not support video.
+        </video>
+      </div>
+
+      <h3 class="memory-section-title">Our Song</h3>
+      <div class="music-player">
+        <button id="music-btn" class="music-btn" aria-label="Play our song">
+          ▶
+        </button>
+        <div>
+          <strong>Our Special Song 🎵</strong>
+          <p>Press play and remember us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Gift Three: secret passcode -->
+  <section id="secret-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn" data-close="secret-modal" aria-label="Close">
+        ×
+      </button>
+
+      <div class="lock-area">
+        <div class="lock-icon">🔐</div>
+        <h2 class="modal-title">A Secret Place Only For Us</h2>
+        <p>Enter the password to unlock my heart.</p>
+        <p class="hint">Hint: Do you love me? 😉</p>
+
+        <input
+          id="passcode-input"
+          class="passcode-input"
+          type="password"
+          inputmode="numeric"
+          maxlength="3"
+          placeholder="•••"
+          aria-label="Enter secret passcode"
+        />
+
+        <br />
+        <button id="unlock-btn" class="primary-btn">Unlock My Heart 💗</button>
+        <p id="error-message" class="error-message"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Secret Love Vault -->
+  <section id="love-vault" class="hidden">
+    <div class="section-heading">
+      <h1>You Unlocked My Heart ❤️</h1>
+      <p>Every folder has a little piece of my love for you.</p>
+    </div>
+
+    <div class="folders-container">
+      <div class="folder" data-letter="why-love-you">
+        <span>📁</span>
+        <p>Why I Love You</p>
+      </div>
+
+      <div class="folder" data-letter="first-memories">
+        <span>📁</span>
+        <p>Our First Memories</p>
+      </div>
+
+      <div class="folder" data-letter="miss-me">
+        <span>📁</span>
+        <p>Open When You Miss Me</p>
+      </div>
+
+      <div class="folder" data-letter="little-things">
+        <span>📁</span>
+        <p>Little Things I Adore</p>
+      </div>
+
+      <div class="folder" data-letter="future">
+        <span>📁</span>
+        <p>Our Future</p>
+      </div>
+
+      <div class="folder" data-letter="forever">
+        <span>📁</span>
+        <p>Forever Us</p>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button id="back-to-gifts" class="secondary-btn">← Back to gifts</button>
+    </div>
+  </section>
+
+  <!-- Folder letter popup -->
+  <section id="folder-letter-modal" class="modal hidden">
+    <div class="modal-content">
+      <button
+        class="close-btn"
+        data-close="folder-letter-modal"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <h2 id="folder-title" class="modal-title">Love Letter</h2>
+
+      <!-- JavaScript will insert the selected folder letter here -->
+      <div id="folder-letter-content" class="letter-paper"></div>
+    </div>
+  </section>
+
+  <!-- Replace this with your special song -->
+  <audio id="background-music" src="assets/music/our-song.m4a"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
